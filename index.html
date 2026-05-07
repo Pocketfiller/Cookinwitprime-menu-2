@@ -1,5 +1,6 @@
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The CookinWitPrime Menu</title>
   <style>
     body {
@@ -67,6 +68,119 @@
       padding: 30px;
       color: white;
     }
+
+    /* MOBILE RESPONSIVENESS */
+    @media screen and (max-width: 768px) {
+
+      body {
+        font-size: 16px;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+
+      .promo {
+        font-size: 15px;
+        padding: 8px 12px;
+      }
+
+      header p {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .section {
+        padding: 15px;
+      }
+
+      .card {
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 12px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .card img {
+        height: auto !important;
+        max-height: 250px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      iframe {
+        height: 600px !important;
+      }
+
+      footer {
+        font-size: 15px;
+        padding: 20px;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .promo {
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .btn {
+        font-size: 15px;
+        padding: 12px;
+      }
+
+      iframe {
+        height: 550px !important;
+      }
+
+    }
+
   </style>
 </head>
 
@@ -98,7 +212,7 @@
   <p>1 Plate: $28</p>
   <p>2 Plates: $40</p>
   <p>3 Plates: $50</p>
-  </p>*Additional Plate +$1*</p>
+  <p><i>Additional Plate +$1</i></p>
   <br>
   <p>Bulk:</p>
   <p>Full Pan: $70</p>
