@@ -69,6 +69,53 @@
       color: white;
     }
 
+    /* DROPDOWN MENU */
+    .menu-container {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 9999;
+    }
+
+    .menu-button {
+      background: rgba(0,0,0,0.75);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      display: none;
+      flex-direction: column;
+      background: rgba(255,255,255,0.95);
+      margin-top: 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      min-width: 200px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .dropdown-menu a {
+      padding: 14px;
+      text-decoration: none;
+      color: #9D825D;
+      font-weight: bold;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .dropdown-menu a:hover {
+      background: #9D825D;
+      color: white;
+    }
+
+    .menu-container:hover .dropdown-menu {
+      display: flex;
+    }
+
     /* MOBILE RESPONSIVENESS */
     @media screen and (max-width: 768px) {
 
@@ -146,6 +193,20 @@
         padding: 20px;
       }
 
+      .menu-button {
+        font-size: 16px;
+        padding: 10px 14px;
+      }
+
+      .dropdown-menu {
+        min-width: 180px;
+      }
+
+      .dropdown-menu a {
+        padding: 12px;
+        font-size: 15px;
+      }
+
     }
 
     @media screen and (max-width: 480px) {
@@ -186,6 +247,18 @@
 
 <body>
 
+<!-- MOBILE/PC DROPDOWN MENU -->
+<div class="menu-container">
+  <button class="menu-button">☰ Menu</button>
+
+  <div class="dropdown-menu">
+    <a href="#menu-section">Home</a>
+    <a href="#menu-section">Order Now</a>
+    <a href="#deals-section">Deals</a>
+    <a href="#contact-section">Contact Us</a>
+  </div>
+</div>
+
 <header>
   <h1>The CookinWitPrime Menu</h1>
 
@@ -224,7 +297,14 @@
   </p>
 </header>
 
-<!-- PRICING (RESTORED ORIGINAL PLACE) -->
+<!-- DEALS -->
+<div class="section card" id="deals-section">
+  <h2>Deals</h2>
+  <p><b>Current Promotion:</b></p>
+  <p>10% OFF All Orders Until June 1st</p>
+</div>
+
+<!-- PRICING -->
 <div class="section card">
   <h2>Pricing</h2>
   <p>Plates:</p>
@@ -240,7 +320,7 @@
 </div>
 
 <!-- MENU -->
-<div class="section">
+<div class="section" id="menu-section">
   <h2 style="color:white; text-align:center;">Menu Items (Click to Order)</h2>
 
   <div class="grid">
@@ -310,6 +390,15 @@
   <h2>Payment Info</h2>
   <p><b>Cash App:</b> $hahaing30</p>
   <p><b>Zelle:</b> 713-502-7552 (Jaheem Mitcham)</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section card" id="contact-section">
+  <h2>Contact Us</h2>
+  <p><b>Cash App:</b> $hahaing30</p>
+  <p><b>Zelle:</b> 713-502-7552 (Jaheem Mitcham)</p>
+  <p><b>Pickup Location:</b> Alvin, Texas</p>
+  <p><b>Business Hours:</b> Monday-Saturday 1 AM - 10 PM | Sunday 2 PM - 10 PM</p>
 </div>
 
 <!-- ORDER FORM -->
